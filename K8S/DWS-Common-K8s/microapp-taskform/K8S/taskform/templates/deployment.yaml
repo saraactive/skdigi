@@ -20,6 +20,7 @@ spec:
     metadata:
       labels:
         app: {{ template "microapp.fullname" . }}
+        version: "current"
     spec:
       containers:
       - name: {{ template "microapp.fullname" . }}
@@ -42,7 +43,7 @@ spec:
         - name: OBJECTSTOARAGE_SERVICE_BINDING
           valueFrom:
             secretKeyRef:
-              name: {{ template "microapp.appid-objectstorage" . }}
+              name: {{ template "microapp.objectstorage-bind" . }}
               key: binding
       imagePullSecrets:
       - name: {{ .Values.image.imagePullSecret }}

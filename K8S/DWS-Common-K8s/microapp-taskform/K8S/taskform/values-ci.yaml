@@ -9,11 +9,11 @@ image:
   repository: us.icr.io/micro-app/taskformserver
   tag: latest
   pullPolicy: Always
-  imagePullSecret: dwsimageregistery
+  imagePullSecret: microapp-ci-us-icr-io
 service:
   type: ClusterIP
-  externalPort: 8080
-  internalPort: 8080
+  externalPort: 3000
+  internalPort: 3000
 resources:
   limits:
     memory: "1Gi"
@@ -22,8 +22,8 @@ resources:
     memory: "512Mi"
     cpu: "200m"
 tls:
-   secret: dws-wss-w-tls
+   secret: microapp-cluster-628e7c924395176ab7114ae8af6ef0fe-0000
 domain: microapp-ci
 bindservice:
-      objectstorage: microapp-objectstoarge-ci
+      objectstorage: microapp-objectstorage
 
