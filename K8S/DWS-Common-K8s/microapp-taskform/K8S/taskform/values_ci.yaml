@@ -26,4 +26,7 @@ tls:
 domain: microapp-ci
 bindservice:
       objectstorage: microapp-objectstorage
+livenessProbe:
+  initialDelaySeconds: 30
+  periodSeconds: 10
 
