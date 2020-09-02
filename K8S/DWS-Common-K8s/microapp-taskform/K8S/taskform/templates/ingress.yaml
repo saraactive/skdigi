@@ -10,9 +10,9 @@ spec:
   tls:
   - secretName: {{ .Values.tls.secret }}
     hosts:
-    - "{{ .Values.domain }}.microapp-cluster-628e7c924395176ab7114ae8af6ef0fe-0000.us-south.containers.appdomain.cloud"
+    - "{{ .Values.domain }}.dws-ipa.com"
   rules:
-  - host: "{{ .Values.domain }}.microapp-cluster-628e7c924395176ab7114ae8af6ef0fe-0000.us-south.containers.appdomain.cloud"
+  - host: "{{ .Values.domain }}.dws-ipa.com"
     http:
       paths:
       - path: /

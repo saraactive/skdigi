@@ -25,13 +25,13 @@ spec:
       containers:
       - name: {{ template "microapp.fullname" . }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: {{ .Values.service.internalPort }}
-            scheme: HTTP
-          initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds}}
-          periodSeconds: {{ .Values.livenessProbe.periodSeconds}}
+#        livenessProbe:
+#          httpGet:
+#            path: /health
+#            port: {{ .Values.service.internalPort }}
+#            scheme: HTTP
+#          initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds}}
+#          periodSeconds: {{ .Values.livenessProbe.periodSeconds}}
         name: {{ template "microapp.fullname" . }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
