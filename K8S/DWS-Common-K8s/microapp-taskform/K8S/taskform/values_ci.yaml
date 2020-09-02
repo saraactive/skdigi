@@ -22,7 +22,7 @@ resources:
     memory: "512Mi"
     cpu: "200m"
 tls:
-   secret: microapp-cluster-628e7c924395176ab7114ae8af6ef0fe-0000
+   secret: dws-ipa-tls
 domain: microapp-ci
 bindservice:
       objectstorage: microapp-objectstorage
