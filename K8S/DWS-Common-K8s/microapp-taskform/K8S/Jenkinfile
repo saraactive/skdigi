@@ -18,7 +18,7 @@ pipeline
         DWS_CHART_DIR        = 'K8S/DWS-Common-K8s/microapp-taskform/K8S/' //directory where to find helm charts
         DWS_UCD_DEPLOY_APP   = 'DWS-MICROAPP-TASKFORM'
         DWS_UCD_COMPONENT    = 'microapptaskform'
-        EMAIL_NOTIFICATION    = 'rparokka@in.ibm.com'
+        EMAIL_NOTIFICATION    = 'rparokka@in.ibm.com,amanbutt@in.ibm.com'
 
     }
 
