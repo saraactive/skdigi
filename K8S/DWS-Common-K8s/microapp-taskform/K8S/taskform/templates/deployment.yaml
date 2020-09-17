@@ -40,10 +40,13 @@ spec:
         env:
         - name: NODE_ENV
           value: "{{ .Values.nodenv }}"
-        - name: OBJECTSTOARAGE_SERVICE_BINDING
-          valueFrom:
+        - name: TASKCOSBINDING
+        valueFrom:
             secretKeyRef:
               name: {{ template "microapp.objectstorage-bind" . }}
               key: binding
+        envFrom:
+        - configMapRef:
+            name: {{ template "microapp.envconfigmap" . }}
       imagePullSecrets:
       - name: {{ .Values.image.imagePullSecret }}
