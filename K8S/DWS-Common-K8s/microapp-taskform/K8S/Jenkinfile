@@ -11,7 +11,7 @@ pipeline
         DWS_STASH_NAME       = 'microchart'//Stash name
         DWS_DOCKER_REG_URL   = 'https://us.icr.io'
         DWS_DOCKER_REG       = 'us.icr.io'
-        DWS_DOCKER_NAMESPACE = 'micro-app' // docker namespace DWS-env
+        DWS_DOCKER_NAMESPACE = 'dwsmicroapp' // docker namespace DWS-env
         DWS_DOCKER_REPO      = 'taskformserver'
         DWS_DOCKER_REG_USER  = 'docker-registry'
         DWS_UCD_USER         = 'ucd-cred'
@@ -58,6 +58,7 @@ pipeline
                     DWS_UCD_DEPLOY_APP_LOCAL       =   env.DWS_UCD_DEPLOY_APP 
                     DWS_UCD_COMPONENT_LOCAL        =   env.DWS_UCD_COMPONENT 
                     DWS_BUILD_ACTIONS_LOCAL        =   env.DWS_BUILD_ACTIONS
+                    DWS_DEPLOY_ENV_LOCAL           =   env.DWS_DEPLOY_ENV
 
                     IMAGE_TAG_BDATE = DWS_IMAGE_TAG_LOCAL    
                 }
@@ -127,7 +128,7 @@ pipeline
                             echo 'IMAGE_TAG_BDATE = '  +IMAGE_TAG_BDATE
                             echo 'IMAGE_TAG_JOB_NUM = '  +IMAGE_TAG_JOB_NUM
                             
-                            def image = docker.build(DWS_DOCKER_REG_LOCAL+'/'+DWS_DOCKER_NAMESPACE_LOCAL+'/'+DWS_DOCKER_REPO_LOCAL, "-f ${WORKSPACE}/"+ DWS_GIT_REL_DIR+"/Dockerfile ${WORKSPACE}/"+ DWS_GIT_REL_DIR+'/')
+                            def image = docker.build(DWS_DOCKER_REG_LOCAL+'/'+DWS_DOCKER_NAMESPACE_LOCAL+'-'+DWS_DEPLOY_ENV_LOCAL+'/'+DWS_DOCKER_REPO_LOCAL, "-f ${WORKSPACE}/"+ DWS_GIT_REL_DIR+"/Dockerfile ${WORKSPACE}/"+ DWS_GIT_REL_DIR+'/')
                             //sh 'docker images'
                             image.push('latest') 
                             image.push(IMAGE_TAG_GIT)
