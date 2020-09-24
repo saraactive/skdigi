@@ -45,6 +45,11 @@ spec:
             secretKeyRef:
               name: {{ template "microapp.objectstorage-bind" . }}
               key: binding
+        - name: TASKFORMSERVER_OAUTH
+        valueFrom:
+            secretKeyRef:
+              name: {{ template "microapp.appid-bind" . }}
+              key: binding
         envFrom:
         - configMapRef:
             name: {{ template "microapp.envconfigmap" . }}
