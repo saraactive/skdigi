@@ -1,0 +1,1 @@
+APPCONNECT_CREATE_REQUEST_URL: "https://ac12954e.us-south.apigw.appdomain.cloud/bumJeP/Microapp_CreateServicenow_Ticket"
