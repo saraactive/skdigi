@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart for Kubernetes
+name: microapp-nodeproxy
+version: 1.0.0
