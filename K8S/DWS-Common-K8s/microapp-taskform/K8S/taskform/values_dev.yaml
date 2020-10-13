@@ -1,12 +1,12 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 client: dws
-appGroup: pentest
+appGroup: dev
 debug: "*"
-nodenv: pentest
+nodenv: dev
 replicaCount: 1
 image:
-  repository: us.icr.io/dwsmicroapp-pentest/taskformserver
+  repository: us.icr.io/dwsmicroapp-dev/taskformserver
   tag: latest
   pullPolicy: Always
   imagePullSecret: all-icr-io
@@ -23,6 +23,7 @@ resources:
     cpu: "200m"
 tls:
    secret: dws-ipa-tls
+domain: microapp-dev
 bindservice:
       objectstorage: dws-cos-pentest
       appid: dws-appid-pentest 

@@ -27,4 +27,6 @@ Create the specific name for the ocnfiguration
 {{- define "microapp.objectstorage-bind" -}}
 {{- printf "binding-%s" .Values.bindservice.objectstorage| trunc 63 | trimSuffix "-" -}}
 {{- end -}}
-                                                                                               
+{{- define "microapp.appid-bind" -}}
+{{- printf "binding-%s" .Values.bindservice.appid| trunc 63 | trimSuffix "-" -}}
+{{- end -}}                                                                                               
