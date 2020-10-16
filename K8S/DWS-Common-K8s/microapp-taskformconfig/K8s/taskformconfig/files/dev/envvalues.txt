@@ -1,1 +1,12 @@
-APPCONNECT_CREATE_REQUEST_URL: "https://ac12954e.us-south.apigw.appdomain.cloud/bumJeP/Microapp_CreateServicenow_Ticket"
+
+#Nodeproxy pod :
+MISC={\"profilesUrl\":\"https://us-south.appid.cloud.ibm.com\",\"isLocal\":\"false\",\"baseDomain\":\"microapp-pentest.dws-ipa.com\",\"callbackurl\":\"/callback\",\"PROXY_TARGET\":\"http://microapp-taskform-pentest.ansibletower.svc.cluster.local:3000\",\"cookieExpiry\":86400000}
+APPID_SERVICE_BINDING={\"clientId\":\"108c1d61-4177-4ab3-80b3-603493e23ad6\","\oauthServerUrl\":\"https://us-south.appid.cloud.ibm.com/oauth/v4/1c9e6d22-4f7c-47cd-8f15-ae9e71901d0d\",\"secret\":\"MDQ0NWUzYTQtNGRjMC00MDcyLTllZTItNTA0OTI0NTkxNzhj\",\"tenantId\":\"1c9e6d22-4f7c-47cd-8f15-ae9e71901d0d\"}
+
+#taskform pod:
+
+SNOW_USER_BASE_URL="https://ibmwssdemo2.service-now.com/api/now/table/sys_user"
+SNOW_USERNAME="admin"
+SNOW_API_KEY={\"X-IBM-Client-Id\":\"813f5e41-b53e-42a9-a25c-3b666ed3ca6a\"}
+SNOW_PASSWORD="Wss@snow20"
+APPCONNECT_CREATE_REQUEST_URL="https://ac12954e.us-south.apigw.appdomain.cloud/bumJeP/Microapp_CreateServicenow_Ticket"

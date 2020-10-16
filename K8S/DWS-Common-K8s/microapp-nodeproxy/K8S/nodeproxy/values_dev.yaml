@@ -6,7 +6,7 @@ debug: "*"
 nodenv: dev
 replicaCount: 1
 image:
-  repository: us.icr.io/dwsmicroapp-dev/taskformserver
+  repository: us.icr.io/dwsmicroapp-dev/taskform-nodeproxy
   tag: latest
   pullPolicy: Always
   imagePullSecret: all-icr-io
@@ -25,8 +25,7 @@ tls:
    secret: dws-ipa-tls
 domain: microapp-dev
 bindservice:
-      objectstorage: dws-cos-pentest
-      appid: dws-appid-pentest 
+      appid: dws-appid-dev 
 livenessProbe:
   initialDelaySeconds: 30
   periodSeconds: 10
