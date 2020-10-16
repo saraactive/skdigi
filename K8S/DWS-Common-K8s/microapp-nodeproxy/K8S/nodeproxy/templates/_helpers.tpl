@@ -22,7 +22,7 @@ Create the specific name for the ocnfiguration
 {{- printf "nodeproxy-configmap-%s"  .Values.appGroup | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 {{- define "microapp.envconfigmap" -}}
-{{- printf "nodeproxy-env-%s"  .Values.appGroup | trunc 63 | trimSuffix "-" -}}
+{{- printf "taskform-env-%s"  .Values.appGroup | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 {{- define "microapp.appid-bind" -}}
 {{- printf "binding-%s" .Values.bindservice.appid| trunc 63 | trimSuffix "-" -}}
