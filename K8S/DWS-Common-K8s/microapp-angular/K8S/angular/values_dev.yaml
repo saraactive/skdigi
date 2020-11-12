@@ -6,7 +6,7 @@ debug: "*"
 nodenv: dev
 replicaCount: 1
 image:
-  repository: us.icr.io/dwsmicroapp-dev/taskform-nodeproxy
+  repository: us.icr.io/dwsmicroapp-dev/taskform-angular
   tag: latest
   pullPolicy: Always
   imagePullSecret: all-icr-io
@@ -21,11 +21,6 @@ resources:
   requests:
     memory: "512Mi"
     cpu: "200m"
-tls:
-   secret: dws-ipa-tls
-domain: microapp-dev
-bindservice:
-      appid: dws-appid-dev 
 livenessProbe:
   initialDelaySeconds: 30
   periodSeconds: 10
