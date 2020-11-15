@@ -12,8 +12,8 @@ image:
   imagePullSecret: all-icr-io
 service:
   type: ClusterIP
-  externalPort: 3000
-  internalPort: 3000
+  externalPort: 4200
+  internalPort: 4200
 resources:
   limits:
     memory: "1Gi"
