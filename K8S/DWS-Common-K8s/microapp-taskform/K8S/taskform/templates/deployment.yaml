@@ -53,5 +53,10 @@ spec:
               secretKeyRef:
                 name: {{ template "microapp.appid-bind" . }}
                 key: binding
+          - name: STATIC_FORM_SERVER_URL
+            valueFrom:
+              configMapKeyRef:
+                name: {{ template "microapp.envconfigmap" . }}
+                key: STATIC_FORM_SERVER_URL
       imagePullSecrets:
       - name: {{ .Values.image.imagePullSecret }}

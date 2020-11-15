@@ -40,10 +40,5 @@ spec:
         env:
           - name: NODE_ENV
             value: "{{ .Values.nodenv }}"
-          - name: STATIC_FORM_SERVER_URL
-            valueFrom:
-              configMapKeyRef:
-                name: {{ template "microapp.envconfigmap" . }}
-                key: STATIC_FORM_SERVER_URL
       imagePullSecrets:
       - name: {{ .Values.image.imagePullSecret }}
