@@ -44,7 +44,7 @@ spec:
           - name: NODE_ENV
             value: "{{ .Values.nodenv }}"
           - name: PORT
-            value: {{ .Values.service.internalPort }}
+            value: "3000"
           - name: APPID_SERVICE_BINDING
             valueFrom:
               secretKeyRef:
