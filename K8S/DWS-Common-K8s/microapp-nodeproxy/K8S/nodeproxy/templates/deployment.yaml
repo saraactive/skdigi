@@ -43,7 +43,9 @@ spec:
         env:
           - name: NODE_ENV
             value: "{{ .Values.nodenv }}"
-          - name: TASKFORMSERVER_OAUTH
+          - name: PORT
+            value: {{ .Values.service.internalPort }}
+          - name: APPID_SERVICE_BINDING
             valueFrom:
               secretKeyRef:
                 name: {{ template "microapp.appid-bind" . }}
