@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mydep
+  name: skdigiskfeat
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: mydep
+      app: skdigifeatapp
   template:
     metadata:
       labels:
-        app: mydep
+        app: skdigifeatapp
     spec:
       containers:
-      - name: mydep
-        image: us.icr.io/sknsk8s/skfirstapp:v2
+      - name: skdigifeatcont
+        image: us.icr.io/sknsk8s/skdigfeatapp:v1
         ports:
         - containerPort: 8080

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mydep-svc
+  name: skdigskfeat-svc
   labels:
-    app: mydep
+    app: skdigifeatapp
 spec:
   type: "LoadBalancer"
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: mydep
+    app: skdigifeatapp
